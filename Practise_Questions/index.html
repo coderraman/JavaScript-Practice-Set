@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practice Questions From ProCoder</title>
+  </head>
+  <body>
+    <!-- JavaScript -->
+    <script>
+      // First
+      //Type of null
+      let a = null;
+      console.log(typeof null); //Out Would be Object Because In the bignning of JavaScript the type on null is Object!
+
+      // Second
+      //convert a const variable in another variable and then modify the value of const variable without changing that another variable with JSON and JSON Stringify
+
+      const user1 = {
+        Name: "Raman",
+        City: "Delhi",
+        isGraduate: true,
+        address: {
+          Village: "Holambi Kalan",
+          Colony: "Vashu Vihar",
+        },
+      };
+
+      //   const user2  = user1
+      //   console.log(user1);
+
+      const user2 = JSON.parse(JSON.stringify(user1));
+      user2.Name = "Aman";
+      user2.City = "Punjab";
+
+      // console.log(user2);
+
+      //JSON.stringify QUestions for Practice____----_
+      const person = {
+        name: "John Doe",
+        age: 30,
+        isEmployed: true,
+        address: {
+          street: "123 Main St",
+          city: "Delhi",
+          state: "Nort West",
+          postalCode: "110082",
+        },
+        hobbies: ["reading", "traveling", "swimming"],
+      };
+      const JsonString = JSON.stringify(person);
+      console.log(JsonString); //So here Output will be All data Comes in String Format!
+
+      const data = {
+        name: "Alice",
+        greet: function () {
+          return "Hello!";
+        },
+        age: undefined,
+      };
+      const JsonString2 = JSON.stringify(data);
+      console.log(JsonString2); //Here only name:"Alice" will be Print Because When using JSON.stringify, functions and undefined values are not included in the resulting JSON string. Therefore, the output will be: name:"Alice"
+
+      const replacement = (key, value) => {
+        if (key !== "address") {
+          return undefined;
+        } else {
+          return value;
+        }
+      };
+      const jsonValue = JSON.stringify(person, replacement);
+      console.log(jsonValue);
+
+      // Third
+      //Make First Letter Capital of a string
+      // const Name = "my name is raman";
+      // function FirstLetterCapitl(String) {
+      //   let words = String.splt(" ");
+      //   const newArr = [];
+      //   for(let i = 0 ;i<words.length; i++){
+      //     const word = words[i]
+      //     const capitalword = word.charAt(0).toUpperCase + word.slice(1)
+      //     newArr.push(capitalword)
+
+      //   }
+      // }
+
+      // let name = "raman";
+      // let name2 = "aman";
+      // function capitalword(word, word2) {
+      //   let Capiword = word.charAt(0).toUpperCase() + word.slice(1);
+      //   let capiword2 = word2.charAt(0).toUpperCase() + word2.slice(1);
+
+      //   return `${Capiword},${capiword2}`;
+      // }
+      // let Stringword = capitalword(name, name2);
+      // console.log(Stringword);
+
+      //First Qustio Self
+      // let name = "raman";
+      // function capitalWord(word) {
+      //   return word.charAt(0).toUpperCase() + word.slice(1);
+      // }
+      // let newArr = capitalWord(name);
+      // document.write(newArr);
+
+      //Two Words First Letter Capital
+      let name = "raman";
+      let name2 = "aman";
+      function capitalWord(name, name2) {
+        let nameCapi = name.charAt(0).toUpperCase() + name.slice(1);
+        let name2Capi = name2.charAt(0).toUpperCase() + name2.slice(1);
+
+        return `${nameCapi},${name2Capi}`;
+      }
+      let Stringword = capitalWord(name, name2);
+      console.log(Stringword);
+
+      // First Letter Capital question___
+
+      // let Name = "my name is raman";
+      // let newName = Name.split(" ");
+      // let FinalValue = newName.map((ele) => ele.charAt(0).toUpperCase() + ele.slice(1));
+      // const result = FinalValue.join(" ");
+      // console.log(result);
+      // // console.log(FinalValue);
+
+      // let numbers = [1,2,3,4,5]
+      // let newNum = numbers.join(',')
+      // console.log(newNum);
+
+      let Name = "my name is gogo";
+      let newName = Name.split(" ");
+      let FinalValue = newName.map(
+        (ele) => ele.charAt(0).toUpperCase() + ele.slice(1)
+      );
+      let result = FinalValue.join(" "); // we put here what we want in ou code line
+      console.log(result);
+
+      // let Name = "my name is riya";
+      // let newName = Name.split(" ");
+      // let finalSelf = newName.map(
+      //   (ele) => ele.charAt(0).toUpperCase() + ele.slice(1)
+      // );
+      // const result = finalSelf.join(" ");
+      // console.log(result);
+
+      // let Name = "my name is gogo";
+      // let newName = Name.split(" "); // Split the sentence into words
+      // // console.log(newName);
+      // let FinalValue = newName.map(
+      //   (ele) => ele.charAt(0).toUpperCase() + ele.slice(1)
+      // );
+      // const result = FinalValue.join(" "); // Join the words back into a single string with spaces
+      // console.log(result); // Output: "My Name Is Gogo"
+    </script>
+  </body>
+</html>
