@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Question Set</title>
+  </head>
+  <body>
+    <script>
+      //First Question
+      // function foo(){
+      //     var x = 10;
+      //     console.log(x);  //Here Output will be 10 Because we Define upon it !
+      // }
+      // foo();
+      // console.log(x);  // Here Output will be x is not defined!
+
+      //Second Question
+      //   {
+      //     var a = 10;
+      //     let b = 20;
+      //     console.log(a); //Here Output is 10
+      //     console.log(b); //Here Output is 20
+      //   }
+      //   console.log(a); //Here Output is 10
+      //   console.log(b); //Here is not defined error becuase we can access var keyword value out side the block scope but in case of let we can't!
+
+      //Third Question
+      //   console.log(a);
+      //   let a = 10;  // Here will Refrence error this  will say the can't access "a" before intallizing Because of Temporal Dead Zone!
+      //   var a = 10; // Here will Output Undefined due to hoisting!
+      //   const a = 10;    // Here will Refrence error this  will say the can't access "a" before intallizing Because of Temporal Dead Zone!
+
+      //Fourth Question
+      //   var x = 20;
+      //   function foo(){
+      //     console.log(x);
+      //     var x = 10
+      //   }
+      //   foo() // Output will be Undefind!
+
+      //Fifth Question Make First Letter of Each Word Uppercase!
+      //   let Name = "my name is raman";
+      //   let newName = Name.split(" ");
+      //  newName =  newName.map((e) => e.charAt(0).toUpperCase() + e.slice(1));
+      //   let finaName = newName.join(" ");
+      //   console.log(finaName); //OutPut will be My Name Is Raman!
+    </script>
+  </body>
+</html>
